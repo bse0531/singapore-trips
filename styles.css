@@ -465,3 +465,46 @@ main {
   border-top: 1px solid var(--border-subtle);
   letter-spacing: 0.03em;
 }
+
+
+
+/* Day 카드 헤더: Day + 날짜 정렬 */
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.day-date {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* Day 설명 텍스트 */
+.day-text {
+  margin: 0 0 0.4rem;
+  font-size: 0.87rem;
+}
+
+/* Day 1 여러 장 사진용 */
+.day-photo-row {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.day-photo-button {
+  flex: 1;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.day-photo-button .day-photo {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
