@@ -1,4 +1,4 @@
-// Hero slider
+// Hero slider + 터치 스와이프
 (function () {
   const slides = document.querySelectorAll('.hero-slide');
   if (!slides.length) return;
@@ -6,6 +6,7 @@
   const dots = document.querySelectorAll('.hero-dot');
   const prevBtn = document.querySelector('.hero-prev');
   const nextBtn = document.querySelector('.hero-next');
+  const slider = document.querySelector('.hero-slider');
 
   let current = 0;
   let autoTimer = null;
@@ -52,6 +53,52 @@
   function restartAuto() {
     clearInterval(autoTimer);
     startAuto();
+  }
+
+  // 🔹 터치 스와이프 추가
+  if (slider) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let touched = false;
+
+    slider.addEventListener(
+      'touchstart',
+      (e) => {
+        if (!e.touches || !e.touches.length) return;
+        touchStartX = e.touches[0].clientX;
+        touchEndX = touchStartX;
+        touched = true;
+      },
+      { passive: true }
+    );
+
+    slider.addEventListener(
+      'touchmove',
+      (e) => {
+        if (!touched || !e.touches || !e.touches.length) return;
+        touchEndX = e.touches[0].clientX;
+      },
+      { passive: true }
+    );
+
+    slider.addEventListener('touchend', () => {
+      if (!touched) return;
+      const diff = touchEndX - touchStartX;
+      const threshold = 40; // 스와이프 인식 최소 거리(px)
+
+      if (Math.abs(diff) > threshold) {
+        if (diff < 0) {
+          // 왼쪽으로 스와이프 → 다음 슬라이드
+          next();
+        } else {
+          // 오른쪽으로 스와이프 → 이전 슬라이드
+          prev();
+        }
+        restartAuto();
+      }
+
+      touched = false;
+    });
   }
 
   startAuto();
