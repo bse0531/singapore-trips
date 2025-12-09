@@ -70,30 +70,44 @@ a {
 /* Trip nav: 회차 탭 (sub pages) */
 .trip-nav {
   display: flex;
-  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
   overflow-x: auto;
-  padding: 0.9rem 1.4rem 0.5rem; /* 상단 여백 살짝 넉넉히 */
+  padding: 0.9rem 1.2rem 0.6rem;
   max-width: 640px;
   margin: 0 auto;
 }
 
-/* 기본 탭 스타일 */
+/* 각 탭 */
 .trip-tab {
   flex: 0 0 auto;
-  padding: 0.45rem 1.2rem;  /* 크기 살짝 키움 */
-  border-radius: 10px;      /* 너무 둥글지 않게 */
-  font-size: 0.95rem;       /* 글자 약간 키움 */
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  color: #4b5563;           /* 중간 회색 텍스트 */
-  background: transparent;  /* 배경 투명 */
-  transition: color 0.2s ease, background 0.2s ease;
+  color: #4b5563;
+  background: transparent;
+  border: none;
+  position: relative;
 }
 
-/* 활성 탭 (클릭된 상태) */
-.trip-tab.active {
-  color: #f97316;           /* 주황색 강조 */
-  background: transparent;  /* 배경 그대로 투명 */
+/* 탭 사이 구분선 */
+.trip-tab:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d1d5db; /* 옅은 회색 */
+  font-weight: 400;
 }
+
+/* 활성 탭 */
+.trip-tab.active {
+  color: #f97316;
+  font-weight: 700; /* 굵게 */
+}
+
 
 
 main {
