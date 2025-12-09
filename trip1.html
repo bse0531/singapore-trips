@@ -47,7 +47,7 @@
       </div>
     </section>
 
- <section class="trip-schedule section-inner">
+<section class="trip-schedule section-inner">
   <h2 class="section-title">Schedule</h2>
   <div class="day-list">
     <!-- Day 1 -->
@@ -57,65 +57,86 @@
         <p class="day-date">2022-07-28</p>
       </div>
 
-      <p class="day-text">두근두근 제 2의 신혼여행. 싱가포르로 출발!</p>
-
-      <div class="day-photo-row">
-        <!-- 사진 1 -->
-        <button
-          class="gallery-item day-photo-button"
-          data-image="assets/trip1-day1-1.jpg"
-          data-caption="인천공항에서 출발 준비 ✈️"
-        >
-          <img
-            src="assets/trip1-day1-1.jpg"
-            alt="Day 1 photo 1"
-            class="day-photo"
-          />
-        </button>
-
-        <!-- 사진 2 -->
-        <button
-          class="gallery-item day-photo-button"
-          data-image="assets/trip1-day1-2.jpg"
-          data-caption="비행기 안에서 두근두근 싱가포르로 가는 중"
-        >
-          <img
-            src="assets/trip1-day1-2.jpg"
-            alt="Day 1 photo 2"
-            class="day-photo"
-          />
-        </button>
-
-        <!-- 사진 3 (원하면 더 추가 가능) -->
-        <button
-          class="gallery-item day-photo-button"
-          data-image="assets/trip1-day1-3.jpg"
-          data-caption="창 밖으로 보이는 하늘 구경 ☁️"
-        >
-          <img
-            src="assets/trip1-day1-3.jpg"
-            alt="Day 1 photo 3"
-            class="day-photo"
-          />
-        </button>
+      <div class="day-log">
+        <!-- 블록 1 -->
+        <div class="day-block">
+          <button
+            class="gallery-item day-photo-button"
+            data-image="assets/trip1-day1-1.jpg"
+            data-caption="두근두근 제 2의 신혼여행. 싱가포르로 출발!"
+          >
+            <img
+              src="assets/trip1-day1-1.jpg"
+              alt="두근두근 제 2의 신혼여행. 싱가포르로 출발!"
+              class="day-photo"
+            />
+          </button>
+          <p class="day-note">
+            두근두근 제 2의 신혼여행. 싱가포르로 출발!
+          </p>
+        </div>
       </div>
     </article>
 
-    <!-- Day 2, Day 3+는 지금 있는 구조 그대로 놔둬도 되고,
-         마음에 들면 나중에 Day 2도 같은 방식으로 바꿔도 됨 -->
+    <!-- Day 2 -->
     <article class="day-card">
-      <h3>Day 2</h3>
-      <img src="assets/trip1-day2.jpg" alt="Day 2 photo" class="day-photo">
-      <p>센토사, 유니버설, 마리나 베이 등 주요 일정 위주로 한두 줄씩 남겨보세요.</p>
+      <div class="day-header">
+        <h3>Day 2</h3>
+        <p class="day-date">2022-07-29</p>
+      </div>
+
+      <div class="day-log">
+        <!-- 블록 1: USS에서 신나는 모험 -->
+        <div class="day-block">
+          <button
+            class="gallery-item day-photo-button"
+            data-image="assets/trip1-day2-1.jpg"
+            data-caption="USS에서 신나는 모험"
+          >
+            <img
+              src="assets/trip1-day2-1.jpg"
+              alt="USS에서 신나는 모험"
+              class="day-photo"
+            />
+          </button>
+          <p class="day-note">USS에서 신나는 모험</p>
+        </div>
+
+        <!-- 블록 2: 저녁은 Orchard에서 -->
+        <div class="day-block">
+          <button
+            class="gallery-item day-photo-button"
+            data-image="assets/trip1-day2-2.jpg"
+            data-caption="저녁은 Orchard에서"
+          >
+            <img
+              src="assets/trip1-day2-2.jpg"
+              alt="저녁은 Orchard에서"
+              class="day-photo"
+            />
+          </button>
+          <p class="day-note">저녁은 Orchard에서</p>
+        </div>
+      </div>
     </article>
 
+    <!-- Day 3+ 예시 (원하면 나중에 같은 패턴으로 채우기) -->
     <article class="day-card">
-      <h3>Day 3+</h3>
-      <img src="assets/trip1-day3.jpg" alt="Day 3 photo" class="day-photo">
-      <p>필요한 만큼 Day 카드를 복사해서 쓰면 됩니다.</p>
+      <div class="day-header">
+        <h3>Day 3+</h3>
+        <p class="day-date">2022-07-30 ~</p>
+      </div>
+      <div class="day-log">
+        <div class="day-block">
+          <p class="day-note">
+            필요한 만큼 <code>.day-block</code>을 복사해서 사진 + 한 줄 기록을 쌓아가면 돼.
+          </p>
+        </div>
+      </div>
     </article>
   </div>
 </section>
+
 
 
     <section class="trip-gallery section-inner">
