@@ -313,6 +313,8 @@ main {
   color: var(--muted);
 }
 
+
+/* Day 카드 */
 .day-list {
   display: grid;
   gap: 0.7rem;
@@ -321,9 +323,64 @@ main {
 .day-card {
   background: var(--card);
   border-radius: 0.9rem;
-  padding: 0.85rem 1rem;
+  padding: 0.85rem 1rem 1rem;
   border: 1px dashed var(--border-subtle);
 }
+
+/* Day 헤더: Day + 날짜 */
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+}
+
+.day-date {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* Day 안에서 이미지 + 텍스트 쌓이는 영역 */
+.day-log {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* 각 이미지+텍스트 블록 */
+.day-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* 🔳 정사각형 이미지 버튼 */
+.day-photo-button {
+  width: 100%;
+  aspect-ratio: 1 / 1;      /* 정사각형 영역 확보 */
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.day-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* 정사각형 안에 꽉 차게 */
+}
+
+/* 설명 텍스트 */
+.day-note {
+  margin: 0;
+  font-size: 0.87rem;
+  color: var(--text);
+}
+
 
 .day-card h3 {
   margin: 0 0 0.3rem;
@@ -337,23 +394,7 @@ main {
 }
 
 /* Day 안 이미지 버튼 (클릭 → 모달) */
-.day-photo-button {
-  width: 100%;
-  padding: 0;
-  border: none;
-  background: none;
-  border-radius: 0.7rem;
-  overflow: hidden;
-}
 
-/* 사진은 가로를 기준으로, 세로는 원본 비율 그대로 */
-.day-photo {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;  /* 잘리지 않고 전체 보이게 */
-  border-radius: 0.7rem;
-}
 
 
 
