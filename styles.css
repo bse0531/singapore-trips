@@ -320,11 +320,20 @@ main {
   gap: 0.7rem;
 }
 
+
+/* Day 카드 숨김/보임 제어 */
+
 .day-card {
+  display: none;
   background: var(--card);
   border-radius: 0.9rem;
   padding: 0.85rem 1rem 1rem;
   border: 1px dashed var(--border-subtle);
+}
+
+
+.day-card.active {
+  display: block;
 }
 
 /* Day 헤더: Day + 날짜 */
@@ -391,6 +400,37 @@ main {
   font-size: 0.85rem;
   color: var(--muted);
 }
+
+
+/* Day 탭 영역 */
+.day-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.day-tab {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-soft);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.day-tab:hover {
+  background-color: var(--accent-soft);
+}
+
+.day-tab.active {
+  border-color: var(--accent);
+  background-color: var(--accent-soft);
+  color: var(--accent);
+}
+
+
 
 /* Day 안 이미지 버튼 (클릭 → 모달) */
 
