@@ -175,3 +175,29 @@
     }
   });
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dayTabs = document.querySelectorAll(".day-tab");
+  const dayCards = document.querySelectorAll(".day-card");
+
+  if (!dayTabs.length || !dayCards.length) return;
+
+  dayTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const targetDay = tab.dataset.day;
+
+      // 탭 active 변경
+      dayTabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      // Day 카드 표시 변경
+      dayCards.forEach((card) => {
+        if (card.dataset.day === targetDay) {
+          card.classList.add("active");
+        } else {
+          card.classList.remove("active");
+        }
+      });
+    });
+  });
+});
