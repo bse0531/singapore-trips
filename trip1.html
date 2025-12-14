@@ -49,9 +49,17 @@
 
 <section class="trip-schedule section-inner">
   <h2 class="section-title">Travel Log</h2>
+
+  <!-- ✅ Day 탭 버튼들 -->
+  <div class="day-tabs" role="tablist">
+    <button class="day-tab active" data-day="1" role="tab">Day 1</button>
+    <button class="day-tab" data-day="2" role="tab">Day 2</button>
+    <button class="day-tab" data-day="3plus" role="tab">Day 3+</button>
+  </div>
+
   <div class="day-list">
     <!-- Day 1 -->
-    <article class="day-card">
+    <article class="day-card active" data-day="1">
       <div class="day-header">
         <h3>Day 1</h3>
         <p class="day-date">2022-07-28</p>
@@ -91,20 +99,17 @@
             오차드 JEN 호텔
           </p>
         </div>
-
-        
       </div>
     </article>
 
     <!-- Day 2 -->
-    <article class="day-card">
+    <article class="day-card" data-day="2">
       <div class="day-header">
         <h3>Day 2</h3>
         <p class="day-date">2022-07-29</p>
       </div>
 
       <div class="day-log">
-        <!-- 블록 1: USS에서 신나는 모험 -->
         <div class="day-block">
           <button
             class="gallery-item day-photo-button"
@@ -133,7 +138,6 @@
           <p class="day-note">Sentosa 섬으로</p>
         </div>
 
-        <!-- 블록 2: USS -->
         <div class="day-block">
           <button
             class="gallery-item day-photo-button"
@@ -147,7 +151,7 @@
           </button>
         </div>
 
-         <div class="day-block">
+        <div class="day-block">
           <button
             class="gallery-item day-photo-button"
             data-image="assets/trip1-day2-3.jpg"
@@ -161,7 +165,6 @@
           <p class="day-note">Universal Studios Singapore</p>
         </div>
 
-                <!-- 블록 3: 저녁은 Orchard에서 -->
         <div class="day-block">
           <button
             class="gallery-item day-photo-button"
@@ -176,7 +179,6 @@
           <p class="day-note">저녁은 비보시티에서 </p>
         </div>
 
-
         <div class="day-block">
           <button
             class="gallery-item day-photo-button"
@@ -190,7 +192,7 @@
           </button>
         </div>
 
-   <div class="day-block">
+        <div class="day-block">
           <button
             class="gallery-item day-photo-button"
             data-image="assets/trip1-day2-6.jpg"
@@ -201,14 +203,13 @@
               class="day-photo"
             />
           </button>
-      <p class="day-note">오차드에서 시원한 바람과 함께 버스킹 음악을 듣다</p>
-   </div>
-        
+          <p class="day-note">오차드에서 시원한 바람과 함께 버스킹 음악을 듣다</p>
+        </div>
       </div>
     </article>
 
-    <!-- Day 3+ 예시 (원하면 나중에 같은 패턴으로 채우기) -->
-    <article class="day-card">
+    <!-- Day 3+ -->
+    <article class="day-card" data-day="3plus">
       <div class="day-header">
         <h3>Day 3+</h3>
         <p class="day-date">2022-07-30 ~</p>
@@ -223,6 +224,7 @@
     </article>
   </div>
 </section>
+
 
 
   </main>
