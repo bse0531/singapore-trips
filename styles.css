@@ -474,7 +474,7 @@ main {
 
 .modal-close {
   position: absolute;
-  top: 0.25rem;
+  top: 0.75rem;
   right: 0.6rem;
   background: none;
   border: none;
