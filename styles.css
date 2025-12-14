@@ -366,11 +366,12 @@ main {
 }
 
 .day-photo {
-  inset: 0;
+  display: block;
   width: 100%;
-  height: auto;
-
+  height: auto;        /* 세로 비율 유지 */
+  object-fit: contain; /* 이미지 전체 보이기 (여백 생길 수 있음) */
 }
+
 
 /* 설명 텍스트 */
 .day-note {
