@@ -474,8 +474,7 @@ main {
 /* Modal controls */
 
 .modal-close {
-  position: absolute;
-  top: 0.75rem;
+  top: 0.25rem;
   right: 0.6rem;
   background: none;
   border: none;
