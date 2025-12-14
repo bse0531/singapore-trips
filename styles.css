@@ -474,15 +474,15 @@ main {
 /* Modal controls */
 
 .modal-close {
-  margin-left: auto;
-  top: 0.25rem;
-  right: 0.6rem;
+  display: block;
+  margin-left: auto; /* 오른쪽으로 밀기 */
   background: none;
   border: none;
   color: var(--muted);
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 
 .modal-arrow {
   position: absolute;
