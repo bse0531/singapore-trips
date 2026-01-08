@@ -24,7 +24,7 @@
     <section class="trip-header">
       <p class="trip-tag">2nd Trip</p>
       <h1 class="trip-title">2nd Trip to Singapore</h1>
-      <p class="trip-subtitle">여행 기간, 숙소, 비행기, 스케줄을 간단히 정리해 주세요.</p>
+      <p class="trip-subtitle">싱가포르에서 호캉스</p>
     </section>
 
     <section class="trip-overview section-inner">
@@ -46,43 +46,122 @@
       </div>
     </section>
 
-    <section class="trip-schedule section-inner">
-      <h2 class="section-title">Schedule</h2>
-      <div class="day-list">
-        <article class="day-card">
-          <h3>Day 1</h3>
-          <img src="assets/trip2-day1.jpg" alt="Day 1 photo" class="day-photo">
-          <p>도착 후 어떤 루트로 이동했는지, 첫 일정이 뭐였는지 적어두면 좋아요.</p>
-        </article>
-        <article class="day-card">
-          <h3>Day 2</h3>
-          <img src="assets/trip2-day2.jpg" alt="Day 2 photo" class="day-photo">
-          <p>센토사, 유니버설, 마리나 베이 등 주요 일정 위주로 한두 줄씩 남겨보세요.</p>
-        </article>
-        <article class="day-card">
-          <h3>Day 3+</h3>
-          <img src="assets/trip2-day3.jpg" alt="Day 3 photo" class="day-photo">
-          <p>필요한 만큼 Day 카드를 복사해서 쓰면 됩니다.</p>
-        </article>
-      </div>
-    </section>
+<section class="trip-schedule section-inner">
+  <h2 class="section-title">Travel Log</h2>
 
-    <section class="trip-gallery section-inner">
-      <h2 class="section-title">Gallery</h2>
-      <p class="section-subtitle">썸네일을 클릭하면 모달로 크게 볼 수 있어요. 좌우 화살표로 사진을 넘겨보세요.</p>
-      <div class="gallery-grid">
-        <button class="gallery-item" data-image="assets/trip2-1.jpg" data-caption="여기에 사진 설명을 적어주세요. 예: 첫날 밤 마리나 베이 산책.">
-          <img src="assets/trip2-1.jpg" alt="Gallery image 1">
-        </button>
-        <button class="gallery-item" data-image="assets/trip2-2.jpg" data-caption="예: 폭우가 쏟아졌는데도 즐거웠던 순간.">
-          <img src="assets/trip2-2.jpg" alt="Gallery image 2">
-        </button>
-        <button class="gallery-item" data-image="assets/trip2-3.jpg" data-caption="예: 아침 조식 뷰, 수영장, 카페 등.">
-          <img src="assets/trip2-3.jpg" alt="Gallery image 3">
-        </button>
+  <!-- ✅ Day 탭 버튼들 -->
+  <div class="day-tabs" role="tablist">
+    <button class="day-tab active" data-day="1" role="tab">Day 1</button>
+    <button class="day-tab" data-day="2" role="tab">Day 2</button>
+    <button class="day-tab" data-day="3" role="tab">Day 3</button>
+    <button class="day-tab" data-day="4" role="tab">Day 4</button>
+    <button class="day-tab" data-day="5" role="tab">Day 5</button>
+    <button class="day-tab" data-day="6" role="tab">Day 6</button>
+  </div>
+
+  <div class="day-list">
+    <!-- Day 1 -->
+    <article class="day-card active" data-day="1">
+      <div class="day-header">
+        <h3>Day 1</h3>
+        <p class="day-date">2022-01-11</p>
       </div>
-    </section>
-  </main>
+
+      <div class="day-log">
+        <!-- 블록 1 -->
+        <div class="day-block">
+          <button
+            class="gallery-item day-photo-button"
+            data-image="assets/trip2-day1-01.jpg"
+          >
+            <img
+              src="assets/trip2-day1-01.jpg"
+              alt="-"
+              class="day-photo"
+            />
+          </button>
+          <p class="day-note">두근두근 2번째 싱가포르 여행!</p>
+        </div>
+
+        <!-- 블록 2 -->
+        <div class="day-block">
+          <button
+            class="gallery-item day-photo-button"
+            data-image="assets/trip2-day1-02.jpg"
+          >
+            <img
+              src="assets/trip2-day1-02.jpg"
+              alt="-"
+              class="day-photo"
+            />
+          </button>
+          <p class="day-note">오차드 JEN 호텔</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 2 -->
+    <article class="day-card" data-day="2">
+      <div class="day-header">
+        <h3>Day 2</h3>
+        <p class="day-date">2022-07-29</p>
+      </div>
+
+      <div class="day-log">
+      
+        <div class="day-block">
+          <button
+            class="gallery-item day-photo-button"
+            data-image="assets/trip2-day2-01.jpg"
+          >
+            <img
+              src="assets/trip2-day2-01.jpg"
+              alt="-"
+              class="day-photo"
+            />
+          </button>
+          <p class="day-note">Sentosa 섬으로</p>
+        </div>
+
+        
+      </div>
+    </article>
+
+    <!-- Day 3+ -->
+    <article class="day-card" data-day="3">
+      <div class="day-header">
+        <h3>Day 3</h3>
+        <p class="day-date">2022-07-30</p>
+      </div>
+      <div class="day-log">
+
+         <div class="day-block">
+          <button
+            class="gallery-item day-photo-button"
+            data-image="assets/trip2-day3-01.jpg"
+          >
+            <img
+              src="assets/trip2-day3-01.jpg"
+              alt="-"
+              class="day-photo"
+            />
+          </button>
+          <p class="day-note">TOAST BOX에서 먹은 작은 카야토스트와 밀크티</p>
+        </div>
+
+
+      </div>
+    </article>
+
+
+
+
+
+
+    
+  </div>
+</section>
+</main>
 
   <!-- Gallery Modal with arrows -->
   <div class="modal" id="gallery-modal" aria-hidden="true">
